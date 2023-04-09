@@ -1,34 +1,28 @@
 <script setup>
-import BtnLink from "@/Components/Shared/BtnLink.vue";
+import ButtonLink from "@/Components/Shared/ButtonLink.vue";
+import AppLogo from "./AppLogo.vue";
 </script>
 
 <template>
-    <header class="mb-8 border-b pb-4">
-        <div class="mx-24 mt-2 flex place-items-center justify-between">
-            <div id="logo">SerbaAda</div>
+  <header
+    class="border-b border-blue-400 bg-gradient-to-r from-sky-600 via-20% via-cyan-400 to-blue-500 pb-4"
+  >
+    <section class="mx-24 flex place-items-center justify-between pt-2">
+      <AppLogo />
 
-            <div v-if="!$page.props.auth.user" class="flex space-x-4">
-                <BtnLink :href="route('login')" button="secondary">
-                    Login
-                </BtnLink>
+      <section v-if="!$page.props.auth.user" class="flex space-x-4">
+        <ButtonLink :href="route('login')" button="secondary">
+          Login
+        </ButtonLink>
 
-                <BtnLink :href="route('register')"> Register </BtnLink>
-            </div>
+        <ButtonLink :href="route('register')"> Register </ButtonLink>
+      </section>
 
-            <div v-else>
-                <BtnLink :href="route('logout')" method="post">
-                    Logout
-                </BtnLink>
-            </div>
-        </div>
-    </header>
+      <section v-else>
+        <ButtonLink :href="route('logout')" method="post" button="danger">
+          Logout
+        </ButtonLink>
+      </section>
+    </section>
+  </header>
 </template>
-
-<style>
-@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&display=swap");
-
-#logo {
-    font-family: "Kanit";
-    font-size: 3rem;
-}
-</style>

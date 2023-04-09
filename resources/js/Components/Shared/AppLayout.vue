@@ -3,7 +3,7 @@ import AppHeader from "@/Components/Shared/AppHeader.vue";
 </script>
 
 <template>
-    <AppHeader />
+  <AppHeader />
 
-    <slot />
+  <slot />
 </template>

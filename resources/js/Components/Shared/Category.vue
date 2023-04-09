@@ -1,0 +1,26 @@
+<script setup>
+import { Link } from "@inertiajs/vue3";
+
+const props = defineProps({
+  name: { type: String },
+});
+</script>
+
+<template>
+  <div class="rounded-lg bg-gradient-to-t from-violet-800 to-blue-400 p-1">
+    <Link href="#" preserve-scroll>
+      <figure
+        class="h-max-[21.5rem] flex h-full flex-col items-center justify-between rounded bg-gray-800 p-2 transition duration-100 ease-in-out hover:bg-gray-900"
+      >
+        <img
+          class="aspect-square object-contain"
+          :src="'/storage/category/400x400.jpg'"
+          alt="400x400"
+        />
+        <figcaption class="pb-2 pt-4 text-2xl font-semibold">
+          {{ name }}
+        </figcaption>
+      </figure>
+    </Link>
+  </div>
+</template>
