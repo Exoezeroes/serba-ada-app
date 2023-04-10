@@ -5,9 +5,11 @@ import { provide } from "vue";
 
 const props = defineProps({
   categories: { type: Array },
+  user: { type: Object },
 });
 
-provide('categories', props.categories)
+provide("categories", props.categories);
+provide("user", props.user);
 </script>
 
 <script>

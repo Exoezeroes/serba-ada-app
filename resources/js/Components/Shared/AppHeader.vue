@@ -1,6 +1,10 @@
 <script setup>
 import ButtonLink from "@/Components/Shared/ButtonLink.vue";
 import AppLogo from "./AppLogo.vue";
+
+function reloadPage() {
+  window.location.reload();
+}
 </script>
 
 <template>
@@ -19,7 +23,7 @@ import AppLogo from "./AppLogo.vue";
       </section>
 
       <section v-else>
-        <ButtonLink :href="route('logout')" method="post" button="danger">
+        <ButtonLink :href="route('logout')" @click="reloadPage" method="post" button="danger">
           Logout
         </ButtonLink>
       </section>
