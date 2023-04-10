@@ -1,5 +1,5 @@
 <script setup>
-import Modal from "../Modal.vue";
+import Modal from "./Modal.vue";
 import Categories from "./Categories.vue";
 import { reactive } from "vue";
 
@@ -25,7 +25,15 @@ function toggleModal() {
         >
           Tambah Kategori
         </button>
-        <Modal v-model:show="modal.show">tes</Modal>
+
+        <Modal v-model:show="modal.show" @close="toggleModal">
+          <section
+            class="border-b border-gray-300 pb-2 pt-4 text-2xl font-semibold text-gray-800"
+          >
+            Tambah Kategori
+          </section>
+        </Modal>
+
         <Categories class="grid grid-cols-4 gap-4" />
       </section>
     </article>
