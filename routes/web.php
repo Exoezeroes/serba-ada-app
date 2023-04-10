@@ -17,7 +17,8 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::post('/', [HomeController::class, 'store'])->name('home.store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

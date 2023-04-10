@@ -22,7 +22,7 @@ function close() {
         <section class="px-8 py-6">
           <button
             @click="close"
-            class="float-right block h-8 w-8 rounded border border-gray-900/20 bg-gray-200/50 text-xl font-bold hover:bg-gray-300/80"
+            class="float-right block h-8 w-8 rounded border border-red-900/20 bg-red-600/75 text-2xl font-bold text-white hover:bg-red-400/80"
           >
             &times;
           </button>

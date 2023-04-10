@@ -1,16 +1,26 @@
 <script setup>
 import Modal from "./Modal.vue";
 import Categories from "./Categories.vue";
-import { reactive } from "vue";
-import { inject } from "vue";
+import { reactive, inject } from "vue";
+import { useForm, router } from "@inertiajs/vue3";
 
 const user = inject("user");
 
 const modal = reactive({ show: false });
 
-function toggleModal() {
+const toggleModal = () => {
   modal.show = !modal.show;
-}
+};
+
+const form = useForm({
+  name: "",
+});
+
+const submit = () => {
+  form.post("/", {
+    onSuccess: () => { router.get('/') }
+  });
+};
 </script>
 
 <template>
@@ -32,10 +42,39 @@ function toggleModal() {
 
         <Modal v-model:show="modal.show" @close="toggleModal">
           <section
-            class="border-b border-gray-300 text-2xl font-semibold text-gray-800"
+            class="border-b border-gray-300 pb-2 text-2xl font-semibold text-gray-800"
           >
             Tambah Kategori
           </section>
+
+          <form @submit.prevent="submit" class="max-w-1/2">
+            <div class="mb-4 mt-6">
+              <label
+                class="mb-2 block text-xs font-bold uppercase text-gray-700"
+                for="name"
+              >
+                Kategori
+              </label>
+
+              <input
+                v-model="form.name"
+                class="w-full rounded-md border border-gray-400 p-2"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                class="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-400"
+              >
+                Tambah
+              </button>
+            </div>
+          </form>
         </Modal>
 
         <Categories class="grid grid-cols-4 gap-4 pt-2" />
