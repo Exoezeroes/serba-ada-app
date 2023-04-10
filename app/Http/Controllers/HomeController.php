@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function home() {
         $categories = Category::query()
-            ->get(['id', 'name']);
+            ->get(['id', 'name', 'img_path']);
         return Inertia::render('Home', [
             'categories' => $categories,
         ]);

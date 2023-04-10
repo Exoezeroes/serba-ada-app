@@ -14,12 +14,22 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         $categories = [
-            ['name' => 'Alat Tukang',],
-            ['name' => 'Alat Nelayan'],
-            ['name' => 'Alat Listrik'],
-            ['name' => 'Alat Umum'],
-            ['name' => 'Bahan Bangunan'],
-            ['name' => 'Mesin'],
+            [
+                'name' => 'Alat Tukang',
+                'img_path' => '/storage/category/alat-tukang.jpg'
+            ],
+            [
+                'name' => 'Alat Nelayan',
+                'img_path' => '/storage/category/alat-nelayan.jpg'
+            ],
+            [
+                'name' => 'Alat Listrik',
+                'img_path' => '/storage/category/alat-listrik.jpg'
+            ],
+            [
+                'name' => 'Bahan Bangunan',
+                'img_path' => '/storage/category/bahan-bangunan.jpg'
+            ],
         ];
 
         foreach ($categories as $category) {

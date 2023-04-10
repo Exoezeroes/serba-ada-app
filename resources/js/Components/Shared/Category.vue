@@ -2,7 +2,7 @@
 import { Link } from "@inertiajs/vue3";
 
 const props = defineProps({
-  name: { type: String },
+  category: { type: Object },
 });
 </script>
 
@@ -14,11 +14,11 @@ const props = defineProps({
       >
         <img
           class="aspect-square object-contain"
-          :src="'/storage/category/400x400.jpg'"
+          :src="category.img_path ? category.img_path : '/storage/category/400x400.jpg'"
           alt="400x400"
         />
         <figcaption class="pb-2 pt-4 text-2xl font-semibold">
-          {{ name }}
+          {{ category.name }}
         </figcaption>
       </figure>
     </Link>

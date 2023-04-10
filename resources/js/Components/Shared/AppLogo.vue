@@ -7,6 +7,5 @@
 
 #logo {
   font-family: "Kanit";
-  font-size: 3rem;
 }
 </style>
