@@ -1,5 +1,13 @@
 <script setup>
+import Modal from "../Modal.vue";
 import Categories from "./Categories.vue";
+import { reactive } from "vue";
+
+const modal = reactive({ show: false });
+
+function toggleModal() {
+  modal.show = !modal.show;
+}
 </script>
 
 <template>
@@ -9,8 +17,17 @@ import Categories from "./Categories.vue";
         <h1 class="text-5xl font-bold">Selamat datang!</h1>
         <h2 class="text-center text-lg text-gray-400">Mau cari apa?</h2>
       </section>
-
-      <Categories :class="'mt-8 grid w-5/6 grid-cols-4 gap-4'" />
+      <section class="flex w-5/6 flex-col">
+        <button
+          @click="toggleModal"
+          class="my-4 h-10 w-fit place-self-end rounded-md bg-green-500 px-4 font-semibold transition duration-75 ease-in-out hover:bg-green-600 active:bg-green-700"
+          preserve-scroll
+        >
+          Tambah Kategori
+        </button>
+        <Modal v-model:show="modal.show">tes</Modal>
+        <Categories class="grid grid-cols-4 gap-4" />
+      </section>
     </article>
   </main>
 </template>
