@@ -8,9 +8,9 @@ use Inertia\Inertia;
 
 class HomeController extends Controller
 {
-    public function home() {
+    public function index() {
         $categories = Category::query()
-            ->get(['id', 'name', 'img_path']);
+            ->get(['name', 'img_path']);
         return Inertia::render('Home', [
             'categories' => $categories,
         ]);

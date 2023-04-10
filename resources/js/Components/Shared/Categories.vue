@@ -7,7 +7,7 @@ const categories = inject("categories");
 
 <template>
   <section>
-    <article v-for="category in categories" :key="category.id">
+    <article v-for="category, index in categories" :key="index">
       <Category :category="category" />
     </article>
   </section>
