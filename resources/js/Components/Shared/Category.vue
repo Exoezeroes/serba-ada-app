@@ -8,16 +8,17 @@ const props = defineProps({
 
 <template>
   <div class="rounded-lg bg-gradient-to-t from-violet-800 to-blue-400 p-1">
-    <Link href="#" preserve-scroll>
+    <Link :href="route('home.show', category.slug)" preserve-scroll>
       <figure
-        class="h-max-[21.5rem] flex h-full flex-col items-center justify-between rounded bg-gray-800 p-2 transition duration-100 ease-in-out hover:bg-gray-900"
+        class="h-max-[21.5rem] flex h-full flex-col items-center justify-between rounded bg-gray-800 px-2 pt-2 transition duration-100 ease-in-out hover:bg-gray-900"
       >
         <img
-          class="aspect-square object-contain"
-          :src="category.img_path ? category.img_path : '/storage/category/400x400.jpg'"
+          class="aspect-square rounded object-contain"
+          :src="category.img_path ? 
+            category.img_path : '/storage/category/400x400.jpg'"
           alt="400x400"
         />
-        <figcaption class="pb-2 pt-4 text-2xl font-semibold">
+        <figcaption class="py-1 font-semibold">
           {{ category.name }}
         </figcaption>
       </figure>

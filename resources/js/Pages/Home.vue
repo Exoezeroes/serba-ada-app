@@ -1,13 +1,13 @@
 <script setup>
 import { Head } from "@inertiajs/vue3";
-import HomeMain from "@/Components/Shared/HomeMain.vue";
+import Categories from "@/Components/Shared/Categories.vue";
 import { provide } from "vue";
 
 const props = defineProps({
   categories: { type: Array },
 });
 
-provide('categories', props.categories)
+provide("categories", props.categories);
 </script>
 
 <script>
@@ -23,5 +23,14 @@ export default {
     <title>Home</title>
   </Head>
 
-  <HomeMain />
+  <main class="pt-8">
+    <article class="grid place-items-center">
+      <section>
+        <h1 class="text-5xl font-bold">Selamat datang!</h1>
+        <h2 class="text-center text-lg text-gray-400">Mau cari apa?</h2>
+      </section>
+
+      <Categories :class="'mt-8 grid w-5/6 grid-cols-4 gap-4'" />
+    </article>
+  </main>
 </template>

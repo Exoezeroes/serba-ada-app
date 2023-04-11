@@ -16,18 +16,22 @@ class CategorySeeder extends Seeder
         $categories = [
             [
                 'name' => 'Alat Tukang',
+                'slug' => 'alat-tukang',
                 'img_path' => '/storage/category/alat-tukang.jpg'
             ],
             [
                 'name' => 'Alat Nelayan',
+                'slug' => 'alat-nelayan',
                 'img_path' => '/storage/category/alat-nelayan.jpg'
             ],
             [
                 'name' => 'Alat Listrik',
+                'slug' => 'alat-listrik',
                 'img_path' => '/storage/category/alat-listrik.jpg'
             ],
             [
                 'name' => 'Bahan Bangunan',
+                'slug' => 'bahan-bangunan',
                 'img_path' => '/storage/category/bahan-bangunan.jpg'
             ],
         ];
