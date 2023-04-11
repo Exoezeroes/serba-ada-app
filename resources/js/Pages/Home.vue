@@ -5,19 +5,10 @@ import { provide } from "vue";
 
 const props = defineProps({
   categories: { type: Array },
-  user: { type: Object },
+  auth: { type: Object },
 });
 
 provide("categories", props.categories);
-provide("user", props.user);
-</script>
-
-<script>
-import AppLayout from "@/Components/Shared/AppLayout.vue";
-
-export default {
-  layout: AppLayout,
-};
 </script>
 
 <template>
@@ -25,5 +16,5 @@ export default {
     <title>Home</title>
   </Head>
 
-  <HomeMain />
+  <HomeMain :user="auth.user" />
 </template>

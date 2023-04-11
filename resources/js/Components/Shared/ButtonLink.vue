@@ -10,7 +10,7 @@ defineProps({
   <Link
     href="#"
     as="button"
-    class="px-4 py-1 min-h-[2.5rem] min-w-[6rem] rounded-md font-semibold transition duration-75 ease-in-out"
+    class="rounded-md font-semibold transition duration-75 ease-in-out"
     :class="{
       'bg-green-500 hover:bg-green-600 active:bg-green-700':
         button === 'primary',
