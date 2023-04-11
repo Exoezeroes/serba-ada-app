@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('/category/add', [HomeController::class, 'create'])->name('home.create');
 Route::post('/', [HomeController::class, 'store'])->name('home.store');
+
+Route::prefix("/categories")->group(function () {
+    Route::get('/add', [CategoryController::class, 'create'])->name('category.create');
+});
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

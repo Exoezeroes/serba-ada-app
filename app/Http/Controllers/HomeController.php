@@ -19,12 +19,7 @@ class HomeController extends Controller
         return Inertia::render('Home', [
             'categories' => $categories,
         ]);
-    }
-
-    public function create()
-    {
-        return Inertia::render('Category/Add');
-    }
+    }   
 
     public function store(Request $request)
     {

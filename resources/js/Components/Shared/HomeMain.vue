@@ -17,7 +17,7 @@ const props = defineProps({
       <section class="flex w-5/6 flex-col">
         <ButtonLink
           v-if="user"
-          :href="route('home.create')"
+          :href="route('category.create')"
           class="mt-4 h-10 w-40 place-self-end"
         >
           Tambah Kategori
