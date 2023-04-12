@@ -6,34 +6,31 @@ const props = defineProps({
 
 <script>
 import AppLayout from "@/Components/Shared/AppLayout.vue";
+import ButtonLink from "@/Components/Shared/ButtonLink.vue";
 import Category from "@/Components/Shared/Category.vue";
 
 export default {
   layout: AppLayout,
-  components: { Category },
+  components: { Category, ButtonLink },
+};
+
+const back = () => {
+  window.history.back();
 };
 </script>
 
 <template>
-  <main class="pt-8">
-    <article class="grid place-items-center">
+  <main class="flex pt-8">
+    <section class="mx-32 self-end">
+      <ButtonLink @click.prevent="back" button="secondary">
+        Kembali
+      </ButtonLink>
+    </section>
+    <article class="flex flex-col">
       <section>
         <h1 class="text-5xl font-bold" v-text="category.name" />
-        <h2 class="text-center text-lg text-gray-400">Description</h2>
+        <h2 class="text-lg text-gray-400" v-text="category.description" />
       </section>
-
-      <Transition appear
-        appear-from-class="opacity-0"
-        appear-to-class="opacity-100"
-        appear-active-class="transition ease-in delay-50"
-      >
-        <div class="mt-8 w-5/6">
-          <Category
-            :category="category"
-            class="w-36 place-self-start text-sm"
-          />
-        </div>
-      </Transition>
     </article>
   </main>
 </template>

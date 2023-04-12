@@ -11,13 +11,13 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::query()
-            ->get(['name', 'slug', 'img_path']);
+            ->get(['name', 'description', 'slug', 'img_path']);
         return Inertia::render('Home', [
             'categories' => $categories,
         ]);
     }
 
-    public function show($slug)
+    public function show(String $slug)
     {
         $category = Category::query()
             ->where('slug', $slug)

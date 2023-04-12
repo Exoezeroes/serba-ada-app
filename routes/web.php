@@ -18,7 +18,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::get('/{slug}', [HomeController::class, 'show'])->name('home.show');
+Route::get('/category/{slug}', [HomeController::class, 'show'])->name('home.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
