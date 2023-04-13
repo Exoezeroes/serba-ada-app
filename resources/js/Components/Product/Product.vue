@@ -10,7 +10,7 @@ const props = defineProps({
 
 <template>
   <GradientBorder class="h-fit">
-    <Link :href="`/product/${product.slug}`" preserve-scroll>
+    <Link as="button" :href="`/product/${product.slug}`" preserve-scroll>
       <figure
         class="flex h-full flex-col justify-between rounded bg-gray-800 px-2 pt-2 transition duration-100 ease-in-out hover:bg-gray-900"
       >
