@@ -1,4 +1,6 @@
 <script setup>
+import { Link } from "@inertiajs/vue3";
+
 const props = defineProps({
   category: { type: Object },
 });
@@ -20,18 +22,18 @@ const back = () => {
 </script>
 
 <template>
-  <main class="flex pt-8">
-    <section class="mx-32 self-end">
-      <ButtonLink @click.prevent="back" button="secondary">
-        Kembali
-      </ButtonLink>
-    </section>
+  <main class="pt-8">
+    <div class="flex">
+      <section class="mx-32 self-end">
+        <ButtonLink @click.prevent="back" button="secondary">
+          Kembali
+        </ButtonLink>
+      </section>
 
-    <article class="flex flex-col">
-      <section>
+      <section class="flex flex-col">
         <h1 class="text-5xl font-bold" v-text="category.title" />
         <h2 class="text-lg text-gray-400" v-text="category.description" />
       </section>
-    </article>
+    </div>
   </main>
 </template>
