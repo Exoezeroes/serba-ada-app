@@ -9,21 +9,14 @@ const props = defineProps({
 
 <template>
   <GradientBorder>
-    <Link
-      as="button"
-      :href="route('category.show', category.slug)"
-      preserve-scroll
-    >
+    <Link :href="route('category.show', category.slug)" preserve-scroll>
       <figure
         class="h-max-[21.5rem] flex h-full flex-col items-center justify-between rounded bg-gray-800 px-2 pt-2 transition duration-100 ease-in-out hover:bg-gray-900"
       >
         <img
           class="aspect-square rounded object-contain"
-          :src="
-            category.img_path
-              ? category.img_path
-              : '/storage/category/400x400.jpg'
-          "
+          :src="category.img_path ? 
+            category.img_path : '/storage/category/400x400.jpg'"
           alt="400x400"
         />
         <figcaption class="py-1 font-semibold">

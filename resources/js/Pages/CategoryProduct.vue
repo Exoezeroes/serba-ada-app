@@ -6,6 +6,10 @@ const props = defineProps({
   category: { type: Object },
   products: { type: Array },
 });
+
+const back = () => {
+  window.history.back();
+};
 </script>
 
 <script>
@@ -20,7 +24,7 @@ export default {
   <main class="pt-8">
     <div class="flex">
       <section class="mx-32 self-end">
-        <ButtonLink :href="route('home.index')" button="secondary">
+        <ButtonLink @click.prevent="back" button="secondary">
           Kembali
         </ButtonLink>
       </section>
