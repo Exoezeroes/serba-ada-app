@@ -1,7 +1,7 @@
 <script setup>
 import { Link } from "@inertiajs/vue3";
-import ButtonLink from "@/Components/Shared/ButtonLink.vue";
-import AppLogo from "./AppLogo.vue";
+import ButtonLink from "@/Components/Style/ButtonLink.vue";
+import AppLogo from "../App/AppLogo.vue";
 </script>
 
 <template>

@@ -1,6 +1,6 @@
 <script setup>
 import { Head } from "@inertiajs/vue3";
-import Categories from "@/Components/Shared/Categories.vue";
+import Categories from "@/Components/Category/Categories.vue";
 import { provide } from "vue";
 
 const props = defineProps({
@@ -11,7 +11,7 @@ provide("categories", props.categories);
 </script>
 
 <script>
-import AppLayout from "@/Components/Shared/AppLayout.vue";
+import AppLayout from "@/Components/App/AppLayout.vue";
 
 export default {
   layout: AppLayout,

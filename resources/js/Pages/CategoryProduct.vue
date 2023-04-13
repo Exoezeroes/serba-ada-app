@@ -7,10 +7,10 @@ const props = defineProps({
 </script>
 
 <script>
-import AppLayout from "@/Components/Shared/AppLayout.vue";
-import ButtonLink from "@/Components/Shared/ButtonLink.vue";
-import Category from "@/Components/Shared/Category.vue";
-import GradientBorder from "@/Components/Shared/GradientBorder.vue";
+import AppLayout from "@/Components/App/AppLayout.vue";
+import ButtonLink from "@/Components/Style/ButtonLink.vue";
+import Category from "@/Components/Category/Category.vue";
+import GradientBorder from "@/Components/Style/GradientBorder.vue";
 
 export default {
   layout: AppLayout,

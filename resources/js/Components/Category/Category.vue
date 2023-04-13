@@ -1,6 +1,6 @@
 <script setup>
 import { Link } from "@inertiajs/vue3";
-import GradientBorder from "./GradientBorder.vue";
+import GradientBorder from "../Style/GradientBorder.vue";
 
 const props = defineProps({
   category: { type: Object },
