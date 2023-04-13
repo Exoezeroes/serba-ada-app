@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::query()
-            ->get(['title', 'description', 'slug', 'img_path']);
+            ->get();
         return Inertia::render('Home', [
             'categories' => $categories,
         ]);

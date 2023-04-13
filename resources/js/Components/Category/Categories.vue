@@ -6,7 +6,7 @@ const categories = inject("categories");
 </script>
 
 <template>
-  <section>
+  <div>
     <article v-for="(category, index) in categories" :key="index">
       <Transition appear
         enter-from-class="scale-75 opacity-0"
@@ -15,5 +15,5 @@ const categories = inject("categories");
         <Category :category="category" class="text-2xl" />
       </Transition>
     </article>
-  </section>
+  </div>
 </template>
