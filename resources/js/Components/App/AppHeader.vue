@@ -6,7 +6,7 @@ import AppLogo from "../App/AppLogo.vue";
 
 <template>
   <header
-    class="border-b border-blue-400 bg-gradient-to-r from-sky-600 via-20% via-cyan-400 to-blue-500 pb-4"
+    class="sticky top-0 z-50 border-b border-blue-400 bg-gradient-to-r from-sky-600 via-cyan-400 via-20% to-blue-500 pb-4"
   >
     <section class="mx-24 flex place-items-center justify-between pt-2">
       <Link :href="route('home.index')">
