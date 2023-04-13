@@ -26,9 +26,10 @@ const back = () => {
         Kembali
       </ButtonLink>
     </section>
+
     <article class="flex flex-col">
       <section>
-        <h1 class="text-5xl font-bold" v-text="category.name" />
+        <h1 class="text-5xl font-bold" v-text="category.title" />
         <h2 class="text-lg text-gray-400" v-text="category.description" />
       </section>
     </article>
