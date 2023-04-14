@@ -1,6 +1,7 @@
 <script setup>
 import ButtonLink from "@/Components/Style/ButtonLink.vue";
 import Products from "@/Components/Product/Products.vue";
+import { Head } from "@inertiajs/vue3";
 
 const props = defineProps({
   category: { type: Object },
@@ -21,6 +22,9 @@ export default {
 </script>
 
 <template>
+  <Head>
+    <title>{{ category.title }}</title>
+  </Head>
   <main class="pt-8">
     <div class="flex">
       <section class="mx-32 self-end">
