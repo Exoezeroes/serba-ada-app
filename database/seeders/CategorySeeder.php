@@ -18,25 +18,25 @@ class CategorySeeder extends Seeder
                 'title' => 'Alat Tukang',
                 'description' => 'Kebutuhan bagi para tukang-tukang',
                 'slug' => 'alat-tukang',
-                'img_path' => '/storage/category/alat-tukang.jpg'
+                'img_path' => 'https://github.com/Exoezeroes/serba-ada/blob/assets/alat-tukang.jpg?raw=true'
             ],
             [
                 'title' => 'Alat Nelayan',
                 'description' => 'Peralatan untuk memancing',
                 'slug' => 'alat-nelayan',
-                'img_path' => '/storage/category/alat-nelayan.jpg'
+                'img_path' => 'https://github.com/Exoezeroes/serba-ada/blob/assets/alat-nelayan.jpg?raw=true'
             ],
             [
                 'title' => 'Alat Listrik',
                 'description' => 'Alat-alat untuk melancarkan aktivitas berlistrik',
                 'slug' => 'alat-listrik',
-                'img_path' => '/storage/category/alat-listrik.jpg'
+                'img_path' => 'https://github.com/Exoezeroes/serba-ada/blob/assets/alat-listrik.jpg?raw=true'
             ],
             [
                 'title' => 'Bahan Bangunan',
                 'description' => 'Bahan dasar pembangunan',
                 'slug' => 'bahan-bangunan',
-                'img_path' => '/storage/category/bahan-bangunan.jpg'
+                'img_path' => 'https://github.com/Exoezeroes/serba-ada/blob/assets/bahan-bangunan.jpg?raw=true'
             ],
         ];
 

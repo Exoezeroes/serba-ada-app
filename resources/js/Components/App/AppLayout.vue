@@ -1,7 +1,6 @@
 <script setup>
 import AppHeader from "@/Components/App/AppHeader.vue";
 import AppFooter from "./AppFooter.vue";
-import { Link } from "@inertiajs/vue3";
 </script>
 
 <template>
@@ -15,6 +14,6 @@ import { Link } from "@inertiajs/vue3";
     <AppFooter />
   </div>
   <a target="_blank" class="fixed right-4 bottom-4" href="https://wa.me/6282191655522?text=Halo%20SerbaAda%2C">
-    <img class="rounded-xl w-14 hover:bg-lime-400 hover:outline hover:outline-lime-500" src="/storage/whatsapp.png" />
+    <img class="rounded-xl w-14 hover:bg-lime-400 hover:outline hover:outline-lime-500" src="https://github.com/Exoezeroes/serba-ada/blob/assets/whatsapp.png?raw=true" />
   </a>
 </template>
