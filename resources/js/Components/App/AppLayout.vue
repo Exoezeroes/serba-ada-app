@@ -22,11 +22,14 @@ const isLoaded = ref(false);
     href="https://wa.me/6282191655522?text=Halo%20SerbaAda%2C"
   >
     <section class="aspect-square w-14">
-      <div v-if="!isLoaded" class="h-full rounded-xl bg-gray-600" />
+      <div
+        v-if="!isLoaded"
+        class="h-full rounded-xl outline bg-gradient-to-t from-violet-800 from-5% to-blue-400 to-50%"
+      />
       <img
         v-show="isLoaded"
         @load="isLoaded = true"
-        class="w-full rounded-xl hover:bg-lime-400 hover:outline hover:outline-lime-500"
+        class="w-full rounded-xl bg-white outline hover:bg-lime-400 hover:outline-lime-500"
         src="https://github.com/Exoezeroes/serba-ada/blob/assets/whatsapp.png?raw=true"
       />
     </section>
