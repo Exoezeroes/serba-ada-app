@@ -19,7 +19,7 @@ class CategoryController extends Controller
             ->where('category_id', $category->id)
             ->get();
 
-        return Inertia::render('CategoryProduct', [
+        return Inertia::render('Category', [
             'category' => $category,
             'products' => $products,
         ]);
