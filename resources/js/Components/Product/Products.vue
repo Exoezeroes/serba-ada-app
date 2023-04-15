@@ -8,7 +8,7 @@ const props = defineProps({
 
 <template>
   <div>
-    <article v-for="product, index in products" :key="index">
+    <article v-for="product in products" :key="product.slug">
       <Transition
         appear
         enter-from-class="scale-105 opacity-0"

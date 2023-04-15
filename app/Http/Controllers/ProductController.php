@@ -10,16 +10,16 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        // check if q exists
-        if ($request->has('q')) {
-            $products = Product::query()
-                ->where('title', 'like', '%' . $request->input('q') . '%')
-                ->get();
-        } else {
-            $products = Product::all();
-        }
+        // get the q parameter
+        $q = $request->input('q');
 
+        // search for %q%
+        $products = Product::query()
+            ->where('title', 'like', '%' . $q . '%')
+            ->get();
+            
         return Inertia::render('SearchProduct', [
+            'q' => $q,
             'products' => $products,
         ]);
     }
