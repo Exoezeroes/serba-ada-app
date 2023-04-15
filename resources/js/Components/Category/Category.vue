@@ -14,15 +14,14 @@ const isLoaded = ref(false);
   <GradientBorder>
     <Link :href="route('category.show', category.slug)" preserve-scroll>
       <figure
-        class="h-max-[21.5rem] flex h-full min-h-[20.125rem] flex-col items-center justify-between rounded bg-gray-800 px-2 pt-2 transition duration-100 ease-in-out hover:bg-gray-900"
+        class="flex h-full min-h-[20.125rem] flex-col items-center justify-between rounded bg-gray-800 px-2 pt-2 transition duration-100 ease-in-out hover:bg-gray-900"
       >
         <section class="aspect-square w-full">
           <div v-if="!isLoaded" class="h-full rounded bg-gray-600/50" />
           <img
             v-show="isLoaded"
             @load="isLoaded = true"
-            class="aspect-square rounded object-contain"
-            width="400"
+            class="aspect-square rounded w-full object-contain"
             :src="
               category.img_path
                 ? category.img_path
